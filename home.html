@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+    <head></head>
+    <body>
+        <style>
+            .blockTag {
+                background-color: yellowgreen;
+            }
+            .blockTag > div {
+                background: tomato;
+                border: 1px solid black;
+            }
+            .inlineTag > span {
+                background: skyblue;
+                border: 1px solid black;
+            }
+        </style>
+        <div class="blockTag">
+            <div>block 1</div>
+            <div>block 2</div>
+            <div>block 3</div>
+        </div>
+
+        <div class="inlineTag">
+            <span>inline 1</span>
+            <span>inline 2</span>
+            <span>inline 3</span>
+        </div>
+    </body>
+</html>
