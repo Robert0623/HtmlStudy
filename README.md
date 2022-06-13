@@ -1,6 +1,7 @@
 # HTML-Study
 
 ## 06.13
+- VS Code와 깃허브 연동
 - inline태그, block태그 차이(span, div)
 - 제목태그와 목록태그(h1, ul, li)
 - 입력양식태그(form, input)
