@@ -9,6 +9,7 @@
 - 태그의 높이와 너비 지정을 이용한 버튼만들기(width, height)
 
 ## 06.14
+- local, origin dev branch 추가
 - 테이블 태그 다루기(table, thead, tbody, tr, th, td)
 - 여백과 면적의 차이(margin, padding)
 - html 기본 속성 죽이기(* 선택자)
