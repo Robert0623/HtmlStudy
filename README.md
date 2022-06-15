@@ -15,3 +15,9 @@
 - html 기본 속성 죽이기(* 선택자)
 - Position 위치 속성 비교하기(absolute, relative, fixed)
 - 어떻게 보여질까? Display 속성(none, block, inline, flex)
+
+## 06.15
+- XD 디자인보고 홈페이지만들기 - 1
+>[XD 링크](https://xd.adobe.com/spec/410da927-507a-4b73-47d2-9aa39aac9365-373c/grid "링크 제목")
+>[타모디자인](https://www.youtube.com/watch?v=MjmUpXhaqRM "링크 제목")
+- 배경화면 넣기, 검색창과 nav 만들기
