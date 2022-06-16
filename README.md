@@ -17,8 +17,15 @@
 - 어떻게 보여질까? Display 속성(none, block, inline, flex)
 
 ## 06.15
-- XD 디자인보고 홈페이지만들기 - 1
+- XD 디자인을 보고 Html, css로 홈페이지 만들기 - 1
 >참조 링크
 >[1. XD 링크](https://xd.adobe.com/spec/410da927-507a-4b73-47d2-9aa39aac9365-373c/grid "링크 제목")
 >[2. 타모디자인](https://www.youtube.com/watch?v=MjmUpXhaqRM "링크 제목")
-- 배경화면 넣기, 검색창과 nav 만들기
+- intro 배경화면 넣기, 검색창과 navgation bar 만들기
+![image](https://user-images.githubusercontent.com/93371989/173972369-1fb98848-6434-421d-831c-54ed765dcc7e.png)
+
+
+## 06.16
+- XD 디자인을 보고 Html, css로 홈페이지 만들기 - 2
+- intro, .amount까지 완성
+![image](https://user-images.githubusercontent.com/93371989/173972474-5cad606a-721a-4998-b1ed-292b702145cd.png)
