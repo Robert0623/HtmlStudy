@@ -1,4 +1,5 @@
-# HTML-Study
+# HtmlStudy
+<strong>HTML과 CSS를 연습</strong>
 
 ## 06.13
 - VS Code와 깃허브 연동
@@ -22,10 +23,19 @@
 >[1. XD 링크](https://xd.adobe.com/spec/410da927-507a-4b73-47d2-9aa39aac9365-373c/grid "링크 제목")
 >[2. 타모디자인](https://www.youtube.com/watch?v=MjmUpXhaqRM "링크 제목")
 - intro 배경화면 넣기, 검색창과 navgation bar 만들기
+
 ![image](https://user-images.githubusercontent.com/93371989/173972369-1fb98848-6434-421d-831c-54ed765dcc7e.png)
 
 
 ## 06.16
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 2
 - intro, .amount까지 완성
+
 ![image](https://user-images.githubusercontent.com/93371989/173972474-5cad606a-721a-4998-b1ed-292b702145cd.png)
+
+## 06.17
+- XD 디자인을 보고 Html, css로 홈페이지 만들기 - 3
+- icon을 넣어서 main을 완성
+
+![image](https://user-images.githubusercontent.com/93371989/174218657-02534df7-b423-414e-b38f-5b9ff212ef47.png)
+
