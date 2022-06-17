@@ -37,5 +37,5 @@
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 3
 - icon을 넣어서 main을 완성
 
-![image](https://user-images.githubusercontent.com/93371989/174218657-02534df7-b423-414e-b38f-5b9ff212ef47.png)
+![image](https://user-images.githubusercontent.com/93371989/174219052-e8305fed-9289-411d-99d9-d8393b588ad3.png)
 
