@@ -39,3 +39,9 @@
 
 ![image](https://user-images.githubusercontent.com/93371989/174219052-e8305fed-9289-411d-99d9-d8393b588ad3.png)
 
+## 06.18
+- XD 디자인을 보고 Html, css로 홈페이지 만들기 - 4
+- main1, main2, footer 완성
+- 깃허브에 홈페이지 올리기
+
+![1](https://user-images.githubusercontent.com/93371989/174426325-d0975807-3ec4-46ea-af5b-796473e9e4c2.PNG)
