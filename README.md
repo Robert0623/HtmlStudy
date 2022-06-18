@@ -17,6 +17,10 @@
 - Position 위치 속성 비교하기(absolute, relative, fixed)
 - 어떻게 보여질까? Display 속성(none, block, inline, flex)
 
+## Homepage 만들기
+- XD 디자인을 보고 Html, css로 홈페이지 만들기
+- [🚀완성된 홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home) 
+- 
 ## 06.15
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 1
 >참조 링크
@@ -43,5 +47,6 @@
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 4
 - main1, main2, footer 완성
 - 깃허브에 홈페이지 올리기
+- [🚀홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home)
 
 ![1](https://user-images.githubusercontent.com/93371989/174426325-d0975807-3ec4-46ea-af5b-796473e9e4c2.PNG)
