@@ -20,7 +20,7 @@
 ## Homepage 만들기
 - XD 디자인을 보고 Html, css로 홈페이지 만들기
 - [🚀완성된 홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home) 
-- 
+
 ## 06.15
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 1
 >참조 링크
