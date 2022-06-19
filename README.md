@@ -50,3 +50,6 @@
 - [🚀홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home)
 
 ![1](https://user-images.githubusercontent.com/93371989/174426325-d0975807-3ec4-46ea-af5b-796473e9e4c2.PNG)
+
+## 06.19
+- html, css 기초 복습
