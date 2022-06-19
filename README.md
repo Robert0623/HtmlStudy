@@ -1,6 +1,10 @@
 # HtmlStudy
 <strong>HTML과 CSS를 연습</strong>
 
+## Homepage 만들기
+- XD 디자인을 보고 Html, css로 홈페이지 만들기
+- [🚀완성된 홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home) 
+
 ## 06.13
 - VS Code와 깃허브 연동
 - inline태그, block태그 차이(span, div)
@@ -16,10 +20,6 @@
 - html 기본 속성 죽이기(* 선택자)
 - Position 위치 속성 비교하기(absolute, relative, fixed)
 - 어떻게 보여질까? Display 속성(none, block, inline, flex)
-
-## Homepage 만들기
-- XD 디자인을 보고 Html, css로 홈페이지 만들기
-- [🚀완성된 홈페이지로 이동](https://robert0623.github.io/HtmlStudy/home) 
 
 ## 06.15
 - XD 디자인을 보고 Html, css로 홈페이지 만들기 - 1
