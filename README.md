@@ -57,4 +57,6 @@
 
 ## 06.20
 - Html, Css로 홈페이지 만들기 - 1, 2 복습
-- home-1.html
+- 복습내용 home-1.html에 작성
+- Jquery 기초 학습 - jqueryBais1.html, jqueryBasic2.html
+- attr로 이미지 클릭하면 로테이션되는 것을 구글링으로 찾아서 적용.

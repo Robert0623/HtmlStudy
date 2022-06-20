@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리연습1</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script>
+        //document(html)이 ready(준비되면), function()실행
+        $(document).ready(function(){
+                //$(".클래스명").click(function(){}); //클릭하면 function()실행
+                $(".btn").click(function(){
+                    alert('안녕하세요!');
+                });
+        });
+
+        // Js는 타입이 숫자, 문자 2종류 뿐이다.
+        // var num1 = 2;
+        // var char1 = "1";
+
+        // var myName = "TAMO";
+
+        //alert()는 Js내장함수 
+        // alert(myName);
+        // alert(num1+num1);
+        // // 오류이므로 경고창 안뜸
+        // alert(num1+char);
+
+        // if문
+        //document.write()는 Jquery내장함수.
+        // if(num1 == 1) {
+        //     //조건식이 true면 문서에 write해라.
+        //     document.write("num1은 "+num1+" 입니다");
+        // } else if(num1 == 2) {
+        //     document.write("num1은 "+num1+" 입니다")
+        // } else {
+        //     document.write("num1은 "+num1+"가 아닙니다")
+        // }
+
+        // for문
+        // for(var i=0; i<=5; i++) {
+        //     //Jquery내장함수 안에 <br>태그는 ""안에 넣어야 함
+        //     document.write(i+"<br>");
+        // }
+        
+    </script>
+    <style>
+        .btn {
+            width: 100px;
+            height: 40px;
+            font-size: 30px;
+            line-height: 40px;
+            background-color: deeppink;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn">타모</div>
+</body>
+</html>
