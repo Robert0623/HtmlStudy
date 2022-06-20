@@ -52,4 +52,9 @@
 ![1](https://user-images.githubusercontent.com/93371989/174426325-d0975807-3ec4-46ea-af5b-796473e9e4c2.PNG)
 
 ## 06.19
-- html, css 기초 복습
+- Html, Css 기초 - 1, 2 복습
+- basic1-1.html, basic2-1.html
+
+## 06.20
+- Html, Css로 홈페이지 만들기 - 1, 2 복습
+- home-1.html
