@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트연습</title>
+</head>
+<body>
+    <div onclick="output()">범인 판독기</div>
+
+    <input type="text" id="drink">
+    <input type="text" id="burger">
+    <!-- <input type="button" value="버튼이다" onclick="bb()"> -->
+    <!-- <input type="button" value="버튼이다" onclick="bb(document.getElementById('drink').value, document.getElementById('burger').value)"> -->
+    <input type="button" value="버튼이다" onclick="bb(getJuice.value, getMeal.value)">
+    <script>
+        var isMurderer = false;
+        isMurderer = true;
+
+        function murder(human) {
+            if(human == true) {
+                return "범인이다"
+            } else {
+                return "범인이 아니다"
+            }
+        }
+        function output() {
+            console.log( murder(isMurderer) );
+        }
+
+         function hamsu() {
+            return "안녕하세요!"
+        }
+        console.log(hamsu());
+
+        function bb() {
+            alert('경고다!');
+        }
+        var getJuice = document.getElementById('drink');
+        var getMeal = document.getElementById('burger');
+        function bb(juice, meal) {
+            alert("시원하고 달콤한 "+juice+"와 맛있는 "+meal);
+        }
+       
+    </script>
+</body>
+</html>
