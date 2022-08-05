@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .block_tag {
+            background-color: yellowgreen;
+        }
+        .block_tag > div {
+            background-color: tomato;
+            border: 1px solid black;
+        }
+        .inline_tag > span {
+            background-color: skyblue;
+            border: 1px solid black;
+        }
+        li {
+            list-style: none;
+        }
+        .color_btn {
+            width: 100px;
+            height: 36px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 36px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+    <a href="http://www.naver.com">네이버 바로가기</a>
+    <img scr="img.png">
+
+    <form>
+        <input type="text">
+        <input type="submit">
+        <ul>
+            <li><input type="text"></li>
+            <li><input type="password"></li>
+            <li>
+                <label><input type="radio" name="fruit" id="orange">오렌지</label></label>
+                <label><input type="radio" name="fruit" id="apple">사과</label></label>
+                <label><input type="radio" name="fruit" id="strawberry">딸기</label></label>
+            </li>
+            <li>
+                <label><input type="checkbox" name="fruit" id="orange">오렌지</label>
+                <label><input type="checkbox" name="fruit" id="apple">사과</label>
+                <label><input type="checkbox" name="fruit" id="strawberry">딸기</label>
+            </li>
+            <button type="button">버튼입니다</button>
+            <li><div class="color_btn">버튼입니다</div></li>
+        </ul>
+    </form>
+    <div class="block_tag">
+        <div>block 1</div>
+        <div>block 2</div>
+        <div>block 3</div>
+    </div>
+    <div class="inline_tag">
+        <span>inline 1</span>
+        <span>inline 2</span>
+        <span>inline 3</span>
+    </div>
+    <h1>제목</h1>
+    <h6>제목</h6>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+    </ul>
+</body>
+</html>
