@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head></head>
+    <body>
+        <style>
+            * {
+                border-collapse: collapse;
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                color: black;
+                list-style: none;
+            }
+
+            div > span {
+                display: block;
+                border: 1px solid black;
+                background-color: pink;
+            }
+            div > div {
+                background-color: orange;
+                border: 1px solid black;
+            }
+
+            .flexable {
+                display: flex;
+            }
+            div > div {
+                flex: 1;
+            }
+            div > div:first-child {
+                flex: 3;
+            }
+
+            /* .blank_position {
+                width: 100%;
+                height: 400px;
+                background-color: gray;
+            }
+            .relative_position {
+                width: 100%;
+                height: 300px;
+                background-color: pink;
+            }
+            .relative_position > div {
+                padding: 50px;
+                background-color: red;
+                margin-top: 10px;
+            }
+            .relative_position > div:first-child {
+                position: relative;
+                top: -100px;
+            }
+            .absolute_position {
+                width: 100%;
+                height: 300px;
+                background-color: purple;
+            }
+            .absolute_position > div {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 400px;
+                height: 100px;
+                background-color: blue;
+            }
+            .fixed_position {
+                width: 100%;
+                height: 500px;
+                background-color: skyblue;
+            }
+            .fixed_position > div {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                background-color: royalblue;
+                width: 100px;
+                height: 100px;
+            } */
+
+            
+
+            /* table {
+                border: 1px solid black;
+            }
+            table th {
+                border: 1px solid black;
+            }
+            table td {
+                border: 1px solid black;
+                background-color: pink;
+            }
+
+            div {
+                background-color: pink;
+                padding: 10px;
+                margin-left: 50px;
+                margin-top: 50px;
+            }
+
+            div > span:first-child {
+                background-color: red;
+                padding: 20px;
+            }
+
+            div > span:last-child {
+                background-color: red;
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+
+            div > span {
+                background-color: yellowgreen;
+                padding: 10px;
+                margin: 40px;
+            } */
+        </style>    
+        <!-- <div>
+            <span>타모</span>
+            <span>디자인</span>
+            <span>입니다</span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>성별</th>
+                    <th>나이</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                    <td>남성</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                    <td>남성</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                    <td>남성</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table> -->
+
+        <!-- <div class="blank_position">
+            <div>blank</div>
+        </div>
+        <div class="relative_position">
+            <div>relative</div>
+            <div>relative</div>
+        </div>
+        <div class="absolute_position">
+            <div>absolute</div>
+        </div>
+        <div class="fixed_position">
+            <div>fixed</div>
+        </div> -->
+
+        <div>
+            <span>span</span>
+            <span>span</span>
+        </div>
+
+        <div class="flexable">
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+        </div>
+    </body>
+</html>
