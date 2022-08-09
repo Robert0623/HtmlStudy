@@ -8,6 +8,17 @@
     font-family: 'Noto Sans KR', sans-serif;
 
 }
+h1 {
+    font-size: 48px;
+    font-weight: 100;
+}
+.contents1 {
+    font-size: 20px;
+    font-weight: lighter;
+}
+.result {
+    font-size: 24px;
+}
 .intro_bg {
     background-image: utl("image/intro.png");
     width: cover;
@@ -51,4 +62,39 @@
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+}
+
+.intro_text { 
+    width: 100%;
+    margin: 231px auto 231px auto;
+    background-color: red;
+    text-align: center;
+}
+.intro_text > h1,
+.intro_text > h4 {
+    color: #fff;
+}
+.amount {
+    position: relative;
+    top: -66px;
+    display: flex;
+    width: 1280px;
+    background-color: #fff;
+    box-shadow: 0px 10px 0px rgba(0,0,0,0.5);
+    margin: auto;
+}
+
+.amount > li {
+    flex: 1;
+    height: 132px;
+
+}
+.amount > li:not(:last-child) > div {
+    border: 1px solid gray;
+}
+
+.amount > li > div {
+    text-align: center;
+    margin-top: 37px;
+    height: 57px;
 }
