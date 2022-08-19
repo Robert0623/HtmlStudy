@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .detail-page {
+            display: flex;
+            margin: auto;
+            text-align: center;
+        }
+        .thumbnail {
+            width: 1280px;
+            height: 400px;
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+
+        }
+
+        .wrap {
+            flex: 1;
+            width: 600px;
+            height: 900px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .wrap > .title {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+        .wrap > .region {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+        .wrap > .content {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+        .wrap > .tag {
+            width: 800px;
+            height: 50px;
+            border: 1px solid black;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+       
+        .wrap2 {
+            display: flex;
+        }
+        .date {
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            margin: auto;
+        }
+        .button {
+            width: 150px;
+            height: 30px;
+            margin: auto;
+        }
+
+
+        .profile {
+            flex: 1;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+       
+
+    </style>
+    <div class="thumbnail">썸네일</div>
+    <div class="detail-page">
+        <div class="wrap">
+            <div class="title">제목</div>
+            <div class="region">지역, 모집인원, 날짜</div>
+            <div class="content">내용</div>
+            <div class="tag">해시태그</div>
+            <div class="wrap2">
+                <div class="date">날짜, 조회수</div>
+                <div class="button">
+                    <button type="button" id="writeBtn" class="btn">등록</button>
+                    <button type="button" id="modifyBtn" class="btn">수정</button>
+                    <button type="button" id="removeBtn" class="btn">삭제</button>
+                    <button type="button" id="listBtn" class="btn">목록</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="profile">프로필</div>
+        
+    </div>
+</body>
+</html>

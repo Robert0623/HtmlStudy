@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A상세페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="./main.js"></script>
+</head>
+<body>
+<style>
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    border-collapse: collapse;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 1280px;
+    height: 2000px;
+    border: 1px solid black;
+    margin: auto;
+}
+.wrap1 {
+    flex: 2;
+    width: 850px;
+    height: 1000px;
+    text-align: center;
+    border: 1px solid black;
+}
+.wrap1 > .title {
+    width: 850px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid black;
+}
+
+
+.wrap2 {
+    flex: 1;
+    width: 230px;
+    height: 400px;
+    text-align: center;
+    border: 1px solid black;
+}
+.status-bar {
+    display: flex;
+    width: 850px;
+    height: 50px;
+    border: 1px solid black;
+}
+.status,
+.region {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    margin: auto 0 auto 0;
+}
+.content {
+    width: 850px;
+    height: 300px;
+    border: 1px solid black;
+    line-height: 300px;
+}
+.hashtag {
+    width: 850px;
+    height: 50px;
+    border: 1px solid black;
+    line-height: 50px;
+}
+.reg-date-bar {
+    display: flex;
+    width: 850px;
+    height: 50px;
+    border: 1px solid black;
+    line-height: 50px;
+}
+.reg-date,
+.view-cnt,
+.report,
+.answer-cnt {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 0 auto 0;
+    border: 1px solid black;
+}
+.answer-cnt2 {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 0 auto 0;
+    border: 1px solid black;
+}
+.profile-img-bar {
+    display: flex;
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+}
+.profile-img,
+.nickname,
+.tag {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+}
+.age-bar {
+    display: flex;
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+}
+.age,
+.gender,
+.country {
+    width: 100px;
+    height: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+}
+.notice-area {
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    line-height: 30px;
+    margin: 100px auto 0 auto;
+}
+.notice {
+    margin: 50px auto 30px auto;
+}
+.answer-btn {
+    width: 300px;
+    height: 80px;
+    border: 1px solid black;
+    line-height: 80px;
+    font-size: 30px;
+    margin: auto;
+}
+</style>
+
+    <div class="container">
+        <div class="wrap1">
+            <div class="title">
+                <h1>질문제목</h1>
+            </div>
+            <div class="status-bar">
+                <div class="status">
+                    상태
+                </div>
+                <div class="region">
+                    지역 
+                </div>
+            </div>
+            <div class="content">
+                <h1>질문내용</h1>
+            </div>
+            <div class="hashtag">
+                해시태그
+            </div>
+            <div class="reg-date-bar">
+                <div class="reg-date">
+                    등록일
+                </div>
+                <div class="view-cnt">
+                    조회수
+                </div>
+                <div class="answer-cnt">
+                    답변수
+                </div>
+                <div class="report">
+                    신고하기
+                </div>
+            </div>
+            <div class="answer-cnt2">
+                답변수
+            </div>
+        </div>
+        <div class="wrap2">
+            <div class="profile-img-bar">
+                <div class="profile-img">
+                    프로필이미지
+                </div>
+                 <div class="nickname">
+                     닉네임
+                 </div>
+                 <div class="tag">
+                     태그
+                 </div>
+            </div>
+            <div class="age-bar">
+                <div class="age">
+                    나이
+                </div>
+                <div class="gender">
+                    성별
+                </div>
+                <div class="country">
+                    국적
+                </div>
+            </div>
+            <div class="notice-area">
+                <div class="notice">
+                    프로필 사진을 클릭해보세요!
+                </div>
+                <div class="answer-btn">
+                    답변하기
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
