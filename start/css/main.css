@@ -1,0 +1,8 @@
+div {
+  width: 230px;
+  height: 230px;
+  background: url("../images/dice1.jpg");
+} 
+span {
+  color: red;
+}
