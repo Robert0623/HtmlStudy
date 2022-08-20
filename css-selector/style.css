@@ -1,0 +1,64 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* hover에 적용 */
+  /* transition: 1s; */
+}
+.box::before {
+  content: "Before";
+}
+.box::after {
+  content: "After";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+[type="password"] {
+  background-color: orange;
+}
+[data-fruit-name] {
+  background-color: red;
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+}
+.child {
+  width: 100px;
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}
+div {
+  font-size: 70px;
+}
+div.hello {
+  color: red;
+}
+.hello {
+  color: green;
+}
+
+/* 가상 클래스 선택자 */
+/* hover - 마우스를 올라가 있는 동안 선택 */
+/* .box:hover {
+  width: 300px;
+  background-color: royalblue;
+} */
+/* active - 마우스를 클릭하고 있는 동안 선택 */
+/* .box:active {
+  width: 300px;
+  background-color: royalblue;
+} */
+/* focus - 포커스되면 선택(데이터를 입력 받는 태그만 포커스 가능) */
+/* div태그에도 tabindex속성을 추가하면 focus사용 가능 */
+/* 커서가 깜빡일 때 */
+/* input:focus {
+  background-color: orange;
+} */
