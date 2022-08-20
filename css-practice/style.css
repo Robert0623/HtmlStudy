@@ -35,7 +35,7 @@
   top: 100px;
   right: 10px;
 }
-div {
+/* div {
   font-size: 70px;
 }
 div.hello {
@@ -43,7 +43,7 @@ div.hello {
 }
 .hello {
   color: green;
-}
+} */
 
 /* 가상 클래스 선택자 */
 /* hover - 마우스를 올라가 있는 동안 선택 */
@@ -62,3 +62,14 @@ div.hello {
 /* input:focus {
   background-color: orange;
 } */
+
+/* 배경 조절 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  background-image: url("../image/icon0.svg");
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
