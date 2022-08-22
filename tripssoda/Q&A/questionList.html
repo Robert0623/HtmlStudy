@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>질문게시판 리스트페이지</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./questionList.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <script>
+    let msg = "${msg}";
+    if(msg=="LIST_ERR")  alert("게시물 목록을 가져오는데 실패했습니다. 다시 시도해 주세요.");
+    if(msg=="READ_ERR")  alert("삭제되었거나 없는 게시물입니다.");
+    if(msg=="DEL_ERR")   alert("삭제되었거나 없는 게시물입니다.");
+    if(msg=="DEL_OK")    alert("성공적으로 삭제되었습니다.");
+    if(msg=="WRT_OK")    alert("성공적으로 등록되었습니다.");
+    if(msg=="MOD_OK")    alert("성공적으로 수정되었습니다.");
+  </script>
+  <div class="main-img">
+
+  </div>
+  <div class="main-group">
+    <div class="sort-bar">
+      <div class="sort-text">
+        정렬
+      </div>
+      <div class="sort-button">
+        <select class="search-option" name="option">
+          <option value="" >등록순</option>
+          <option value="" >답변순</option>
+        </select>
+      </div>
+      <div class="only-recruit">
+        답변을 기다리는 질문만 보기
+      </div>
+    </div>
+    <div class="list-group">
+      <c:forEach var="questionDto" items="${list}">
+        <a href="<c:url value='/question/read?id=${questionDto.id}&page=${ph.page}&pageSize=${ph.pageSize}'/>">
+        <div class="list">
+          <div class="list-region-line">
+            <div class="list-region-box">
+              <div class="region-icon">
+
+              </div>
+              <div class="region-text">
+                서울
+              </div>
+            </div>
+            <div class="answer-on-off">
+              답변대기:${questionDto.status}
+            </div>
+          </div>
+          <div class="list-title-line">
+            ${questionDto.title}
+          </div>
+          <div class="list-content-line">
+            ${questionDto.content}
+          </div>
+          <div class="hashtag-line">
+            ${questionDto.hashtag}
+          </div>
+          <div class="list-nickname-line">
+            <div class="profile-img">
+              
+            </div>
+            <div class="nickname">
+              ${questionDto.nickname}
+            </div>
+            <div class="dash-img">
+
+            </div>
+            <div class="view-cnt-box">
+              <div class="view-cnt-icon">
+
+              </div>
+              <div class="view-cnt">
+                ${questionDto.viewCnt}
+              </div>
+              <div class="answer-cnt-icon">
+                
+              </div>
+              <div class="answer-cnt">
+                ${questionDto.ansCnt}
+              </div>
+            </div>
+   
+          </div>
+        </div>
+        </a>
+      </c:forEach>
+    </div>
+    <div class="paging-container">
+      <div class="paging">
+          <c:if test="${ph.showPrev}">
+              <a class="paging-prev-next" href="<c:url value='/accompany/list?page=${ph.beginPage-1}&pageSize=${ph.pageSize}'/>">&lt;</a>
+          </c:if>
+          <c:forEach var="i" begin="${ph.beginPage}" end="${ph.endPage}">
+              <a class="paging-active" href="<c:url value='/accompany/list?page=${i}&pageSize=${ph.pageSize}'/>">${i}</a>
+          </c:forEach>
+          <c:if test="${ph.showNext}">
+              <a class="paging-prev-next" href="<c:url value='/accompany/list?page=${ph.endPage+1}&pageSize=${ph.pageSize}'/>">&gt;</a>
+          </c:if>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
