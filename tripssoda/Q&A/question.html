@@ -18,7 +18,7 @@
   
           </div>
           <div class="title-text">
-            제주도 피자 맛집 있나요?
+            ${questionDto.title}
           </div>
         </div>
         <div class="region-box">
@@ -27,53 +27,63 @@
               상태
             </div>
             <div class="answer-on-off">
-              답변대기
+              ${questionDto.status}
             </div>
             <div class="region-text">
               지역
             </div>
             <div class="region-selected">
-              동아시아
+              ${questionDto.regionCode}
             </div>
           </div>
         </div>
         <div class="content-box">
-          안녕하세요~<br/>
-          제주도 피자 맛집 추천 해주세요!!
+          ${questionDto.content}
         </div>
         <div class="hashtag-line">
-          # 남성 # 20대 # 아무나다좋아
+          ${questionDto.hashtag}
         </div>
         <div class="view-cnt-line">
           <div class="reg-date">
-            2022.08.20 01:00
+            <fmt:formatDate value="${questionDto.createdAt}" pattern="yyyy.MM.dd hh:mm" />
           </div>
           <div class="view-cnt">
-            &nbsp· 조회수 30
+            &nbsp· 조회수 ${questionDto.viewCnt}
           </div>
           <div class="answer-cnt">
-            &nbsp· 답변수 0
+            &nbsp· 답변수 ${questionDto.ansCnt}
           </div>
+          <button type="button" class="modify-btn">
+            <a href="<c:url value='/question/modify'/>?id=${questionDto.id}&page=${page}&pageSize=${pageSize}">수정</a>
+          </button>
+          <button type="button" id="remove-btn" class="remove-btn">
+            삭제
+          </button>
         </div>
+
+
         <div class="answer-cnt2">
-          <span class="answer-cnt2-number">3</span>개의 답변
+          <span class="answer-cnt2-number">${questionDto.ansCnt}</span>개의 답변
         </div>
+
+
         <div class="answer-top-box">
           <div class="answer-profile-img-line">
             <div class="answer-profile-img">
 
             </div>
             <div class="answer-nickname-reg-date-box">
+              <!-- userId를 닉네임으로 변경해야함 -->
               <div class="answer-nickname-line">
-                자연과독서
+                ${answerDto.userId}
               </div>
               <div class="answer-reg-date-line">
-                2022.08.21 13:19
+                <fmt:formatDate value="${answerDto.createdAt}" pattern="yyyy.MM.dd hh:mm" />
               </div>
             </div>
           </div>
           <div class="answer-content-box">
-            저도 제주도 맛집 알고싶어요!
+            ${answerDto.content}
         </div>
           <div class="only-line">
           </div>
@@ -90,12 +100,15 @@
           <div class="profile-right">
             <div class="nickname-line">
               <div class="nickname">
-                syonghon
+                ${questionDto.nickname}
               </div>
+              <!-- 프로필에서 태그를 얻어오는듯1 -->
               <div class="profile-tag">
-                # 맛집탐방러
+                ${questionDto.hashtag}
               </div>
             </div>
+            
+            <!-- 프로필에서 태그를 얻어오는듯2 -->
             <div class="tag2-line">
               20대·남성·대한민국·경험추구형
             </div>
@@ -117,6 +130,145 @@
       </div>
     </div>
   </div>
-  
+  <script>
+    $(document).ready(function() {
+        $("#remove-btn").on("click", function() {
+            if(!confirm("정말로 삭제하시겠습니까?")) return;
+            let form = $('#form');
+            form.attr("action", "<c:url value='/question/remove'/>?page=${page}&pageSize=${pageSize}");
+            form.attr("method", "post");
+            form.submit();
+        });
+    });
+</script>
+
+<!-- 답변(댓글) script 시작 -->
+<!-- <script>
+    let questionId = "<c:out value='${questionDto.id}'/>";
+
+    let showList = function(questionId) {
+        $.ajax({
+            type:'GET',       // 요청 메서드
+            url: '/answers?questionId='+questionId,  // 요청 URI
+            success : function(result){
+                $("#commentList").html(toHtml(result));    // 서버로부터 응답이 도착하면 호출될 함수
+            },
+            error   : function(){ alert("error") } // 에러가 발생했을 때, 호출될 함수
+        }); // $.ajax()
+    }
+
+    $(document).ready(function(){
+        //  댓글 부분 scipt 시작
+        showList(questionId);
+
+        $("#modBtn").click(function(){
+            let id = $(this).attr("data-id");
+            let content = $("input[name=content]").val();
+
+            if(content.trim()=='') {
+                alert("댓글을 입력해주세요.");
+                $("input[name=content]").focus()
+                return;
+            }
+
+            $.ajax({
+                type:'PATCH',       // 요청 메서드
+                url: '/answers/'+id,  // 요청 URI // /ch4/comments/70 PATCH
+                headers : { "content-type": "application/json"}, // 요청 헤더
+                data : JSON.stringify({id:id, content:content}),  // 서버로 전송할 데이터. stringify()로 직렬화 필요.
+                success : function(result){
+                    alert(result);
+                    showList(questionId);
+                },
+                error   : function(){ alert("error") } // 에러가 발생했을 때, 호출될 함수
+            }); // $.ajax()
+        });
+
+        $("#sendBtn").click(function(){
+            let comment = $("input[name=content]").val();
+
+            if(comment.trim()=='') {
+                alert("댓글을 입력해주세요.");
+                $("input[name=content]").focus()
+                return;
+            }
+
+            $.ajax({
+                type:'POST',       // 요청 메서드
+                url: '/answers?questionId='+questionId,  // 요청 URI // /ch4/comments?bno=1085 POST
+                headers : { "content-type": "application/json"}, // 요청 헤더
+                data : JSON.stringify({questionId:questionId, content:comment}),  // 서버로 전송할 데이터. stringify()로 직렬화 필요.
+                success : function(result){
+                    alert(result);
+                    showList(questionId);
+                },
+                error   : function(){ alert("error") } // 에러가 발생했을 때, 호출될 함수
+            }); // $.ajax()
+        });
+
+        $("#commentList").on("click", ".modBtn", function() {
+            let id = $(this).parent().attr("data-id");
+            let content = $("div.comment", $(this).parent()).text();
+
+            //1. comment의 내용을 input에 뿌려주기
+            $("input[name=content]").val(content);
+            //2. cno 전달하기
+            $("#modBtn").attr("data-id", id);
+        });
+
+        // $(".delBtn").click(function(){
+        $("#commentList").on("click", ".delBtn", function(){
+            let id = $(this).parent().attr("data-id");
+            let questionId = $(this).parent().attr("data-questionId");
+
+            $.ajax({
+                type:'DELETE',
+                url: '/answers/'+id+'?questionId='+questionId,  // 요청 URI
+                success : function(result){
+                    alert(result)
+                    showList(questionId);
+                },
+                error   : function(){ alert("error") } // 에러가 발생했을 때, 호출될 함수
+            }); // $.ajax()
+        });//end 댓글script
+    });
+
+    //댓글 script2 시작
+    let toHtml = function(comments) {
+        let addZero = function(value=1){
+            return value > 9 ? value : "0"+value;
+        }
+
+        let dateToString = function(ms=0) {
+            let date = new Date(ms);
+
+            let yyyy = date.getFullYear();
+            let mm = addZero(date.getMonth() + 1);
+            let dd = addZero(date.getDate());
+
+            let HH = addZero(date.getHours());
+            let MM = addZero(date.getMinutes());
+            let ss = addZero(date.getSeconds());
+
+            return yyyy+"."+mm+"."+dd+ " " + HH + ":" + MM + ":" + ss;
+        }
+
+
+        let tmp = "<div>";
+
+        comments.forEach(function(comment){
+            tmp += '<div data-id='+comment.id
+            tmp += ' data-questionId='+comment.questionId + '>'
+            tmp += ' <span class="commenter">' + comment.userId + '</span>'
+            tmp += ' <div class="comment">' + comment.content + '</div>'
+            tmp += dateToString(comment.createdAt)
+            tmp += '<button class="delBtn" type="button">삭제</button>'
+            tmp += '<button class="modBtn" type="button">수정</button>'
+            tmp += '</div>'
+        })
+
+        return tmp + "</div>";
+    } //댓글 script2 끝
+</script> -->
 </body>
 </html>

@@ -11,37 +11,96 @@
 
 </head>
 <body>
+  <script>
+    let msg = "${msg}";
+    if(msg=="WRT_ERR") alert("게시물 등록이 실패하였습니다. 다시 시도해 주세요.");
+    if(msg=="MOD_ERR") alert("게시물 수정에 실패하였습니다. 다시 시도해 주세요.");
+  </script>
+
   <div class="main-img">
 
   </div>
-  <form action="" method="">
+  <form id="form" class="frm" action="" method="">
     <div class="main-group">
       <div class="select-region-box">
   
       </div>
+      <c:if test="${mode ne 'new'}">
+          <div>
+              <input name="id" type="hidden" value="${questionDto.id}">
+          </div>
+      </c:if>
       <div class="title-box">
         <div class="question-icon-box">
           <div class="question-icon">
           
           </div>
         </div>
-        <input type="text" class="title-input-box" placeholder="물음표로 끝나는 제목을 입력해보세요.(100자 이내)">
+        <input type="text" class="title-input-box" value="<c:out value='${questionDto.title}'/>" placeholder="물음표로 끝나는 제목을 입력해보세요.(100자 이내)">
       </div>
       <div class="only-line">
       </div>
-      <textarea name="" id="" class="content-input-box" cols="30" rows="10" placeholder="&nbsp 내용을 입력해주세요.(1000자 이내)"></textarea>
+      <textarea name="" id="" class="content-input-box" cols="30" rows="10" placeholder="&nbsp 내용을 입력해주세요.(1000자 이내)"><c:out value="${questionDto.content}"/></textarea>
       <div class="hashtag-box">
-        <input type="text" class="hashtag-input-box" placeholder="&nbsp 태그 입력 (띄어쓰기로 구분) (100자 이내)">
+        <input type="text" class="hashtag-input-box" value="<c:out value='${questionDto.hashtag}'/>" placeholder="&nbsp 태그 입력 (띄어쓰기로 구분) (100자 이내)">
       </div>
       <div class="button-line">
-        <button type="button" class="cancel-btn">
+        <button type="button" id="cancel-btn" class="cancel-btn" onclick="location.href='<c:url value="/question/list"/>?page=${page}&pageSize=${pageSize}'">
           취소
         </button>
-        <button type="button" class="ok-btn">
-          완료
-        </button>
+        <c:if test="${mode eq 'new'}">
+            <button type="button" id="write-btn" class="ok-btn">완료</button>
+        </c:if>
+        <c:if test="${mode ne 'new'}">
+            <button type="button" id="modify-btn" class="ok-btn" >완료</button>
+        </c:if>
       </div>
     </div>
   </form>
+  <script>
+    $(document).ready(function() {
+        let formCheck = function() {
+            let form = document.getElementById("form");
+            if(form.title.value=="") {
+                alert("제목을 입력해 주세요.");
+                form.title.focus();
+                return false;
+            }
+            if(form.content.value=="") {
+                alert("내용을 입력해 주세요.");
+                form.content.focus();
+                return false;
+            }
+            return true;
+        }
+        $("#write-btn").on("click", function() {
+            let form = $("#form");
+            form.attr("action", "<c:url value='/question/write'/>");
+            form.attr("method", "post");
+            if(formCheck()) {
+                form.submit();
+            }
+        });
+        $("#modify-btn").on("click", function() {
+            let form = $("#form");
+            // let isReadonly = $("input[name=title]").attr('readonly');
+            // if(isReadonly=='readonly') {
+            //     $("input[name=title]").attr('readonly', false);
+            //     $("textarea").attr('readonly', false);
+            //     return;
+            // }
+            form.attr("action", "<c:url value='/question/modify'/>?page=${page}&pageSize=${pageSize}");
+            form.attr("method", "post");
+            form.submit();
+        });
+        $("#remove-btn").on("click", function() {
+            if(!confirm("정말로 삭제하시겠습니까?")) return;
+            let form = $('#form');
+            form.attr("action", "<c:url value='/question/remove'/>?page=${page}&pageSize=${pageSize}");
+            form.attr("method", "post");
+            form.submit();
+        });
+    });
+  </script>
 </body>
 </html>
